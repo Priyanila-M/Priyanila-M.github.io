@@ -288,6 +288,55 @@ button:focus-visible {
   font-size: 0.85rem;
 }
 
+/* ===== Leadership & Awards ===== */
+.leadership-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(28px, 4vw, 48px);
+}
+
+.leadership-group__title {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--teal);
+  margin: 0 0 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.leadership-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.leadership-list li {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+.leadership-list li:last-child {
+  border-bottom: none;
+}
+
+.leadership-year {
+  flex: 0 0 auto;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--coral);
+  white-space: nowrap;
+  min-width: 78px;
+}
+
+.leadership-text {
+  font-size: 0.92rem;
+  color: var(--ink);
+  line-height: 1.45;
+}
+
 /* ===== Projects empty state ===== */
 .projects-empty {
   border: 1px dashed var(--line);
@@ -328,5 +377,6 @@ button:focus-visible {
 @media (max-width: 700px) {
   .section { padding: 64px var(--pad); }
   .hero { min-height: auto; padding-top: 100px; padding-bottom: 80px; }
+  .hero__masthead-label { font-size: 0.62rem; }
   .contact__body { flex-direction: column; align-items: flex-start; }
 }
